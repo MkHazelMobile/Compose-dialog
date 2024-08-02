@@ -64,31 +64,3 @@ dependencies {
     implementation("com.airbnb.android:lottie-compose:4.0.0")
 }
 
-configure<PublishingExtension> {
-    publications.create<MavenPublication>("composeDialog") {
-        groupId = "com.github.hammadrfq3"
-        artifactId = "composeDialog"
-        version = "1.0.6"
-        pom.packaging = "jar"
-        artifact("$buildDir/libs/composeDialog.jar")
-
-    }
-    repositories {
-        mavenLocal()
-    }
-}
-
-/*
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-
-                        groupId = 'com.github.philipplackner'
-                artifactId = 'image-preview-compose'
-                version = '1.0'
-            }
-        }
-    }
-}*/
